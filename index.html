@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StarWars Clon</title>
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      background: #000;
+      color: #fff;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      padding: 12px 8px;
+      text-align: center;
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      user-select: none;
+    }
+
+    h1 span:nth-child(1) { color: #ff4d4d; }
+    h1 span:nth-child(2) { color: #ffb84d; }
+    h1 span:nth-child(3) { color: #ffee58; }
+    h1 span:nth-child(4) { color: #66ff66; }
+    h1 span:nth-child(5) { color: #4dd2ff; }
+    h1 span:nth-child(6) { color: #b366ff; }
+
+    main {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 8px 8px;
+    }
+
+    #gameCanvas {
+      background: #000;
+      display: block;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body>
+  <h1 aria-label="StarWars Clon">
+    <span>Star</span> <span>Wars</span> <span>Clon</span> <span>★</span> <span>✦</span> <span>✶</span>
+  </h1>
+  <main>
+    <canvas id="gameCanvas" aria-label="Pantalla del juego"></canvas>
+  </main>
+  <script src="gameplay.js"></script>
+</body>
+</html>
